@@ -35,13 +35,13 @@ int main(void)
 
 	// Array of vertex positions 
 	float positions[6] = {
-		-0.5f,  0.5f,
-		 0.0f,  0.5f,
-		 0.5f, -0.5f
+		-0.5f,  -0.5f,
+		 0.0f,   0.5f,
+		 0.5f,  -0.5f
 	};
 
 	// Create a buffer and bind it
-	// With bind OpenGL will now what to render
+	// With bind OpenGL will know what to render
 	unsigned int buffer;
 	glGenBuffers(1, &buffer);
 	glBindBuffer(GL_ARRAY_BUFFER, buffer);
@@ -51,13 +51,13 @@ int main(void)
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 	glEnableVertexAttribArray(0);
 
-	// glBindBuffer(GL_ARRAY_BUFFER, 0);
-
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
