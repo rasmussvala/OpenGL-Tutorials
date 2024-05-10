@@ -1,39 +1,26 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Ignore build artifacts and executables
+/build/
 *.exe
 *.out
-*.app
-/.vs
+
+# Ignore generated CMake files
+/CMakeFiles/
+/CMakeCache.txt
+/CMakeScripts/
+/CMakeScripts/
+
+# Ignore any temporary files or directories
+*.swp
+*~
+
+# Ignore IDE specific files and directories
+.vscode/
+.idea/
+*.suo
 *.sln
-*.vcxproj
-*.filters
 *.user
-/opengl/x64
-/x64
+*.user.*
+*.sdf
+
+# Ignore any backup files
+*.bak
