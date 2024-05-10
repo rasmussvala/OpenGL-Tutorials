@@ -9,7 +9,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Define sources
-set(SOURCES ../src/Main.cpp)
+set(SOURCES Main.cpp)
 
 # Add an executable target
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Add shader file to the project
+configure_file(Basic.shader Basic.shader COPYONLY)
